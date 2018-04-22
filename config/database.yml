@@ -80,11 +80,11 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
-production:
-  <<: *default
-  database: project_production
-  username: project
-  password: <%= ENV['PROJECT_DATABASE_PASSWORD'] %>
+  production:
+    url: <%= ENV['DATABASE_URL'] %>
+
+# production:
+#   <<: *default
+#   database: project_production
+#   username: project
+#   password: <%= ENV['PROJECT_DATABASE_PASSWORD'] %>
