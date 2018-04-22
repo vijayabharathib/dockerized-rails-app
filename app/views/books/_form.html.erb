@@ -1,0 +1,18 @@
+<%= form_with(model: book, local: true) do |form| %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :book_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author, id: :book_author %>
+  </div>
+
+  <div class="actions">
+    <p></p>
+    <%= form.submit %>
+  </div>
+
+<% end %>

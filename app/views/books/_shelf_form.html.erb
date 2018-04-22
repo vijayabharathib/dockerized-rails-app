@@ -1,0 +1,14 @@
+<%= form_with(model: shelf, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :place,"Shelf"%>
+    <%= form.select(:place,
+        options_for_select(Shelf.places.keys,shelf.place),
+        :include_blank=>true,
+        id: :shelf_place) 
+    %>
+  </div>
+  <%= form.hidden_field :book_id, :value=>params[:id] %>
+  <div class="actions">
+    <p></p><%= form.submit "Move to shelf" %>
+  </div>
+<% end %>

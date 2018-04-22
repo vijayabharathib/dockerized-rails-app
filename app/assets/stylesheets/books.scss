@@ -1,0 +1,46 @@
+.new_book {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.field , .actions{
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 1fr 2fr;
+}
+
+.books {
+    @media(min-width: 330px) {        
+        max-width: 72em;
+        margin: 0 auto;
+    }
+    
+    .shelves {
+        display: flex;
+        max-width: 18em;
+        margin: 1em auto;
+        justify-content: space-around;
+    }
+
+    .book_list {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(18em, 1fr) ) ;
+    }
+
+    .book_entry {
+        display: flex;
+        background: rgba(255,255,255,.5);
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 2px;
+        box-shadow: 0 1px 2px rgba(0,0,0,.3);
+        padding: .5em;
+        &:hover {
+            box-shadow: 0 1px 3px rgba(0,0,0,.5);
+        }
+        h2 { margin: 5px; }
+        h3 { margin: 5px; color: rgba(0,0,0,.6);}
+    }
+}

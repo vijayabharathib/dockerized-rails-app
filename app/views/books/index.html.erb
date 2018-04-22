@@ -1,0 +1,12 @@
+<div class="books">
+  <%= render 'shelf_list' %>
+  <%= link_to "Add New Book", new_book_path , class: 'new_book' %>
+  <section class="book_list">
+      <% @books.each do |book| %>
+        <article class="book_entry">
+          <h2><%= link_to book.title.capitalize, book %></h2>
+          <h3><%= book.author %></h3 >
+        </article>
+      <% end %>
+  </section>
+</div>
