@@ -1,0 +1,13 @@
+language: ruby
+cache: bundler
+rvm:
+  - 2.5.0
+services:
+  - postgresql
+before_script:
+  - cp config/database.travis.yml config/database.yml
+  - psql -c 'create database auth0app_test;' -U postgres
+script:
+  - bin/rake db:migrate RAILS_ENV=test
+  - bin/rake
+  
