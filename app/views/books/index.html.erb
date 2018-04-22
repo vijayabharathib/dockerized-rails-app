@@ -5,7 +5,7 @@
       <% @books.each do |book| %>
         <article class="book_entry">
           <h2><%= link_to book.title.capitalize, book %></h2>
-          <h3><%= book.author.capitalize %></h3 >
+          <h3><%= book.author %></h3 >
         </article>
       <% end %>
   </section>

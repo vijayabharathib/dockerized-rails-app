@@ -1,15 +1,21 @@
+.new_book {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.field , .actions{
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 1fr 2fr;
+}
+
 .books {
     @media(min-width: 330px) {        
         max-width: 72em;
         margin: 0 auto;
     }
     
-    .new_book {
-        display: inline-block;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 1em;
-    }
     .shelves {
         display: flex;
         max-width: 18em;
