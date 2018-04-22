@@ -1,0 +1,14 @@
+<nav>
+    <div> 
+        <%= image_tag "book.svg",class: "logo" %>
+        <h1>
+        <%= link_to "BookShelf", books_path%>
+        </h1>
+    </div>
+    <ul>
+        <% if user_signed_in? %>
+            <li><%= link_to "Profile",profile_path %></li>
+            <li><%= link_to "Logout",auth_logout_path %></li> 
+        <% end %>
+    </ul>
+</nav>

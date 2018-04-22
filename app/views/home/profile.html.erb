@@ -1,0 +1,5 @@
+<section class="profile card">
+  <h2><img src='<%= current_user.image %>' /></h2>
+  <h1><%= current_user.name %></h1>
+  <%= link_to "Logout",auth_logout_path, class: "btn red" %>
+</section>

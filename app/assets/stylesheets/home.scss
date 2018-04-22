@@ -1,3 +1,36 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    background: rgb(240,230,210);
+}
+.card {
+    max-width: 18em;
+    padding: 1em;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px grey;
+    text-align: center;
+    margin: 0 auto;
+    background: rgba(255,255,255,.5);
+}
+
+.btn {
+    padding: .5em;
+    color: white;
+    border-radius: 3px;
+    min-width: 11em;
+    display: inline-block;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.green {
+    background: rgb(54, 150, 8);
+    &:hover {
+        background: rgb(54,180,8);
+    }
+}
+
+.red {
+    background: rgb(150, 4, 8);
+    &:hover {
+        background: rgb(180,14,8);
+    }
+}
